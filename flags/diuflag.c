@@ -1,4 +1,4 @@
-#include "../includes/ft_printf.h"
+#include "../includes/my_printf.h"
 
 void	diflag(t_struct *s)
 {

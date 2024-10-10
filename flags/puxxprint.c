@@ -1,4 +1,4 @@
-#include "../includes/ft_printf.h"
+#include "../includes/my_printf.h"
 
 void	uprint(unsigned int i, t_struct *s)
 {

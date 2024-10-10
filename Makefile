@@ -1,7 +1,7 @@
 NAME = libftprintf.a
 
 SRCS = \
-	ft_printf.c \
+	my_printf.c \
 	flags/diuflag.c \
 	flags/csflag.c \
 	flags/minilibft.c \

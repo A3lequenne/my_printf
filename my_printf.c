@@ -1,4 +1,4 @@
-#include "includes/ft_printf.h"
+#include "includes/my_printf.h"
 
 t_struct	*initialise_struct(t_struct *s)
 {
@@ -26,7 +26,7 @@ void	conv_tab(char c, t_struct *s)
 		percflag(s);
 }
 
-int	ft_printf(const char *input, ...)
+int	my_printf(const char *input, ...)
 {
 	t_struct	*s;
 	int		    i;
@@ -55,37 +55,37 @@ int	ft_printf(const char *input, ...)
 	return (s->len);
 }
 
-void test_ft_printf() {
-    printf("res_mine: %d\n", ft_printf("Mine: Character: %c\n", 'A'));
+void test_my_printf() {
+    printf("res_mine: %d\n", my_printf("Mine: Character: %c\n", 'A'));
     printf("res_real: %d\n\n", printf("Real: Character: %c\n", 'A'));
 
-    printf("res_mine: %d\n", ft_printf("Mine: String: %s\n", "Hello, World!"));
+    printf("res_mine: %d\n", my_printf("Mine: String: %s\n", "Hello, World!"));
     printf("res_real: %d\n\n", printf("Real: String: %s\n", "Hello, World!"));
 
     int a = 42;
-    printf("res_mine: %d\n", ft_printf("Mine: Pointer: %p\n", (void*)&a));
+    printf("res_mine: %d\n", my_printf("Mine: Pointer: %p\n", (void*)&a));
     printf("res_real: %d\n\n", printf("Real: Pointer: %p\n", (void*)&a));
 
-    printf("res_mine: %d\n", ft_printf("Mine: Decimal (signed): %d\n", 123));
+    printf("res_mine: %d\n", my_printf("Mine: Decimal (signed): %d\n", 123));
     printf("res_real: %d\n\n", printf("Real: Decimal (signed): %d\n", 123));
 
-    printf("res_mine: %d\n", ft_printf("Mine: Integer: %i\n", -456));
+    printf("res_mine: %d\n", my_printf("Mine: Integer: %i\n", -456));
     printf("res_real: %d\n\n", printf("Real: Integer: %i\n", -456));
 
-    printf("res_mine: %d\n", ft_printf("Mine: Unsigned: %u\n", 12345));
+    printf("res_mine: %d\n", my_printf("Mine: Unsigned: %u\n", 12345));
     printf("res_real: %d\n\n", printf("Real: Unsigned: %u\n", 12345));
 
-    printf("res_mine: %d\n", ft_printf("Mine: Hexadecimal (uppercase): %X\n", 48879));
+    printf("res_mine: %d\n", my_printf("Mine: Hexadecimal (uppercase): %X\n", 48879));
     printf("res_real: %d\n\n", printf("Real: Hexadecimal (uppercase): %X\n", 48879));
 
-    printf("res_mine: %d\n", ft_printf("Mine: Hexadecimal (lowercase): %x\n", 48879));
+    printf("res_mine: %d\n", my_printf("Mine: Hexadecimal (lowercase): %x\n", 48879));
     printf("res_real: %d\n\n", printf("Real: Hexadecimal (lowercase): %x\n", 48879));
 
-    printf("res_mine: %d\n", ft_printf("Mine: Percentage: %%\n"));
+    printf("res_mine: %d\n", my_printf("Mine: Percentage: %%\n"));
     printf("res_real: %d\n", printf("Real: Percentage: %%\n"));
 }
 
 int main()
 {
-	test_ft_printf();
+	test_my_printf();
 }

@@ -1,5 +1,5 @@
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef MY_PRINTF_H
+# define MY_PRINTF_H
 
 # include <stdarg.h>
 # include <stdio.h>
@@ -12,7 +12,7 @@ typedef struct s_struct
 	int		len;
 }		t_struct;
 
-int		ft_printf(const char *input, ...);
+int		my_printf(const char *input, ...);
 void	pflag(t_struct *s);
 void	xflag(t_struct *s);
 void	bigxflag(t_struct *s);
